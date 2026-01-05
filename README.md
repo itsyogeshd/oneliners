@@ -552,3 +552,11 @@ Find files containing text (`-l` outputs only the file names, `-i` ignores the c
 
     grep -lir "some text" *
 
+Remote Copy files and directories, rsync can use SSH for secure remote transfers:
+
+Push local to remote: 
+    rsync -avz /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
+    
+Pull remote to local: 
+    rsync -avz user@remote_host:/path/to/remote/dir/ /path/to/local/dir/
+    
